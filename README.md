@@ -1,20 +1,45 @@
-# E-commerce REST API
+/*
+# E-commerce API (Node.js, TypeScript, PostgreSQL)
 
 ## Features
-- User Signup / Signin with JWT
-- Product CRUD
-- Place Orders
-- Swagger Docs
+- Signup/Login with JWT authentication
+- Product CRUD (create, read, update, delete)
+- Order creation
+- PostgreSQL + Sequelize ORM
+- Swagger API documentation
+- Middleware: Logging, Error Handling, Total Response Time
+- Typed request/response objects
 
-## Tech
-- Node.js, Express, PostgreSQL, Sequelize
-- Swagger, JWT, bcrypt
+## Getting Started
 
-## Setup
+### 1. Clone and Install
+```
+git clone <repo-url>
+cd ecommerce-api
+npm install
+```
 
-1. Clone repo
-2. Add `.env` file
-3. Install dependencies: `npm install`
-4. Run DB: PostgreSQL must be running
-5. Start dev server: `npm run dev`
-6. Visit Swagger: `http://localhost:5000/api-docs`
+### 2. Create .env file
+```
+PORT=3000
+JWT_SECRET=your_jwt_secret
+DB_HOST=localhost
+DB_PORT=5432
+DB_NAME=ecommerce
+DB_USER=postgres
+DB_PASS=yourpassword
+```
+
+### 3. Run Migrations (Sequelize)
+```
+npx sequelize-cli db:migrate
+```
+
+### 4. Start Project
+```
+npm run dev
+```
+
+### 5. API Docs
+Visit: `http://localhost:3000/api-docs`
+*/
